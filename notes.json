@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mur6izxk42phl",
+    "title": "Weekend Trip Plan",
+    "content": "Hill station drive on Saturday morning. Visit the old fort and sunset point. Pack sandwiches, camera and a thermos of coffee.",
+    "tags": [
+      "travel",
+      "weekend"
+    ],
+    "color": "pink",
+    "pinned": false,
+    "createdAt": "2026-10-02T16:30:31.016Z",
+    "updatedAt": "2026-10-09T13:05:27.952Z"
+  },
+  {
+    "id": "mur6mteqi43s6",
+    "title": "Study Plan",
+    "content": "Revise Express.js routing, middleware and REST API concepts. Practice building a small CRUD API from scratch.",
+    "tags": [
+      "study",
+      "express"
+    ],
+    "color": "green",
+    "pinned": false,
+    "createdAt": "2026-10-02T16:33:29.186Z",
+    "updatedAt": "2026-10-02T16:33:29.186Z"
+  },
+  {
+    "id": "mur6mtgoa0mrx",
+    "title": "Grocery List",
+    "content": "Milk, eggs, sourdough bread, coffee beans, spinach, and dark chocolate.",
+    "tags": [
+      "home"
+    ],
+    "color": "yellow",
+    "pinned": true,
+    "createdAt": "2026-10-02T16:33:29.256Z",
+    "updatedAt": "2026-10-09T13:05:30.816Z"
+  },
+  {
+    "id": "mur9q9jhv0l35",
+    "title": "Good",
+    "content": "This is valid",
+    "tags": [],
+    "color": "default",
+    "pinned": false,
+    "createdAt": "2026-10-02T18:00:08.910Z",
+    "updatedAt": "2026-10-02T18:00:08.910Z"
+  }
+]
