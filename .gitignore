@@ -1,4 +1,9 @@
 node_modules/
+data/*.db
+data/*.db-shm
+data/*.db-wal
 .env
 .DS_Store
-npm-debug.log*
+
+data/uploads/*
+!data/uploads/.gitkeep
