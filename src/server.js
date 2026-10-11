@@ -110,15 +110,74 @@ function validPost(req, res) {
  const category=text(req.body?.category).slice(0,48)||'General'; const cover_image=text(req.body?.cover_image).slice(0,800); if(cover_image && !(/^https?:\/\//i.test(cover_image) || /^\/uploads\/[a-f0-9]{32}\.(jpg|png|webp|gif)$/.test(cover_image))){res.status(400).json({error:'Cover image must be an http(s) URL.'});return null;} return {title,body,tags:JSON.stringify(tagsFrom(req.body?.tags)),category,cover_image};
 }
 function idOf(req,res) { const id = Number(req.params.id); if (!Number.isSafeInteger(id)||id<1) {res.status(400).json({error:'Invalid post ID.'});return null;}return id; }
-app.post('/api/signup', (req,res)=>{
- const username=text(req.body?.username), email=text(req.body?.email).toLowerCase(), password=req.body?.password;
- if (!username || username.length>40 || !validEmail(email) || typeof password!=='string' || password.length<8 || password.length>256) return res.status(400).json({error:'Valid username (max 40), email and password (8+ characters) required.'});
- const salt=crypto.randomBytes(16).toString('hex');
- try {
-  const result=db.prepare('INSERT INTO users(username,email,password_hash,salt) VALUES(?,?,?,?)').run(username,email,hash(password,salt),salt);
-  const user={id:Number(result.lastInsertRowid),username,email};setSession(res,user.id);res.status(201).json({user});
- } catch(e) {if (e.code?.startsWith('ERR_SQLITE_CONSTRAINT')) return res.status(409).json({error:'Username or email already registered.'});throw e;}
+
+app.post('/api/signup', (req, res) => {
+  try {
+    const username = text(req.body?.username);
+    const email = text(req.body?.email).toLowerCase();
+    const password = req.body?.password;
+
+    if (
+      !username ||
+      username.length > 40 ||
+      !validEmail(email) ||
+      typeof password !== 'string' ||
+      password.length < 8 ||
+      password.length > 256
+    ) {
+      return res.status(400).json({
+        error: 'Enter a valid username, email and password (8–256 characters).'
+      });
+    }
+
+    const existingUser = db.prepare(
+      'SELECT id FROM users WHERE email = ? OR username = ?'
+    ).get(email, username);
+
+    if (existingUser) {
+      return res.status(409).json({
+        error: 'Username or email already registered.'
+      });
+    }
+
+    const salt = crypto.randomBytes(16).toString('hex');
+    const passwordHash = hash(password, salt);
+
+    const result = db.prepare(
+      'INSERT INTO users (username, email, password_hash, salt) VALUES (?, ?, ?, ?)'
+    ).run(username, email, passwordHash, salt);
+
+    const user = {
+      id: Number(result.lastInsertRowid),
+      username,
+      email
+    };
+
+    setSession(res, user.id);
+
+    return res.status(201).json({
+      message: 'Account created successfully.',
+      user
+    });
+
+  } catch (error) {
+    console.error('Signup error:', error);
+
+    if (
+      error.code?.startsWith('ERR_SQLITE_CONSTRAINT') ||
+      error.code?.startsWith('SQLITE_CONSTRAINT')
+    ) {
+      return res.status(409).json({
+        error: 'Username or email already registered.'
+      });
+    }
+
+    return res.status(500).json({
+      error: 'Signup failed due to a server error.'
+    });
+  }
 });
+
 app.post('/api/login',(req,res)=>{
  const email=text(req.body?.email).toLowerCase(), password=req.body?.password;
  if (!email || typeof password!=='string') return res.status(400).json({error:'Email and password are required.'});
