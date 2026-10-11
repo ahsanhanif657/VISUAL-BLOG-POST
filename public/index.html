@@ -1,40 +1,16 @@
 <!DOCTYPE html>
-<html data-theme="dark" lang="en">
- <head>
+<html data-palette="sage" data-theme="light" lang="en">
+<head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <meta content="The Journal — a community for thoughtful stories and independent voices" name="description"/>
-  <title>
-   The Journal — Stories worth sharing
-  </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>The Journal — Thoughtful writing from independent voices</title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Newsreader:opsz,wght@6..72,400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <script>try{var d=document.documentElement;d.dataset.theme=localStorage.getItem('journal-theme')||'light';d.dataset.palette=localStorage.getItem('journal-palette')||'sage'}catch(e){document.documentElement.dataset.palette='sage'}</script>
   <style>
-   :root {
-  --bg: #0a1020;
-  --surface: #121b30;
-  --surface2: #19243b;
-  --line: #2b3853;
-  --text: #f5f7ff;
-  --muted: #a1aec8;
-  --purple: #9879ff;
-  --cyan: #53d9e6;
-  --shadow: 0 20px 70px #02061166;
-  color-scheme: dark;
-}
-[data-theme=light] {
-  --bg: #f6f7fb;
-  --surface: #fff;
-  --surface2: #eaeef7;
-  --line: #dfe5f0;
-  --text: #18223a;
-  --muted: #64738e;
-  --purple: #6947df;
-  --cyan: #0c899b;
-  --shadow: 0 15px 50px #16213a14;
-  color-scheme: light;
-}
+   
+
 * {
   box-sizing: border-box;
 }
@@ -81,7 +57,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   gap: 30px;
 }
 .logo {
-  font: 800 23px Manrope,sans-serif;
+  font: 800 23px Fraunces,sans-serif;
   letter-spacing: -1.2px;
   white-space: nowrap;
 }
@@ -122,9 +98,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   border-color: var(--purple);
 }
 .primary {
-  background: #8665ed;
+  background: var(--solid);
   color: white;
-  border-color: #8665ed;
+  border-color: var(--solid);
 }
 .icon {
   padding: 9px 13px;
@@ -145,7 +121,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
-  background: radial-gradient(ellipse at 85% 12%,#6945b02e,transparent 55%);
+  background: radial-gradient(ellipse at 85% 12%,#1d6a5224,transparent 55%);
 }
 .hero-in {
   display: grid;
@@ -156,12 +132,12 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   padding-bottom: 85px;
 }
 .hero h1 {
-  font: 800 clamp(44px,5.4vw,76px)/1.12 Manrope,sans-serif;
+  font: 800 clamp(44px,5.4vw,76px)/1.12 Fraunces,sans-serif;
   letter-spacing: -4px;
   margin: 22px 0;
 }
 .grad {
-  background: linear-gradient(100deg,#a389ff,#4cdeed);
+  background: linear-gradient(100deg,#1d6a50,#b4782a);
   color: transparent;
   background-clip: text;
 }
@@ -179,10 +155,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
 .feature-visual {
   min-height: 395px;
   position: relative;
-  border: 1px solid #6f5ba26b;
+  border: 1px solid #ffffff33;
   border-radius: 25px;
   overflow: hidden;
-  background: linear-gradient(145deg,#1a2850,#35255a 56%,#0e5568);
+  background: linear-gradient(145deg,#173d31,#1f6b52 56%,#7a5a22);
   box-shadow: var(--shadow);
   padding: 32px;
   display: flex;
@@ -214,13 +190,13 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   z-index: 1;
 }
 .feature-visual h2 {
-  font: 800 35px/1.2 Manrope,sans-serif;
+  font: 800 35px/1.2 Fraunces,sans-serif;
   letter-spacing: -1.5px;
   color: white;
   margin: 14px 0;
 }
 .feature-visual p {
-  color: #d6d5ed;
+  color: #e6eee0;
   font-size: 13px;
 }
 .pill {
@@ -246,7 +222,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   gap: 12px;
 }
 .metric b {
-  font: 800 24px Manrope;
+  font: 800 24px Fraunces;
 }
 .metric small {
   display: block;
@@ -264,7 +240,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   margin-bottom: 30px;
 }
 .section h2 {
-  font: 800 clamp(28px,3vw,42px) Manrope;
+  font: 800 clamp(28px,3vw,42px) Fraunces;
   letter-spacing: -1.8px;
   margin: 8px 0;
 }
@@ -326,7 +302,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
 }
 .cover {
   height: 175px;
-  background: linear-gradient(135deg,#2d346f,#6c42a8 50%,#166e87);
+  background: linear-gradient(135deg,#1f4d3f,#2f7a5f 50%,#a47a2c);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,7 +329,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   color: var(--purple);
 }
 .card h3 {
-  font: 800 21px/1.35 Manrope;
+  font: 800 21px/1.35 Fraunces;
   margin: 10px 0;
   letter-spacing: -.5px;
   cursor: pointer;
@@ -379,7 +355,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   font-size: 12px;
 }
 .avatar {
-  background: #7451d8;
+  background: var(--solid);
   color: white;
   width: 30px;
   height: 30px;
@@ -400,10 +376,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   color: var(--text);
 }
 .band {
-  border: 1px solid #8c78f077;
+  border: 1px solid #ffffff33;
   border-radius: 24px;
   padding: 50px;
-  background: linear-gradient(120deg,#272049,#29366a 55%,#18566a);
+  background: linear-gradient(120deg,#17392f,#1f5c48 55%,#7a5a22);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -411,12 +387,12 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible 
   margin-bottom: 70px;
 }
 .band h2 {
-  font: 800 32px Manrope;
+  font: 800 32px Fraunces;
   color: white;
   margin: 10px 0;
 }
 .band p {
-  color: #c5cce6;
+  color: #e3ecdf;
   margin: 0;
 }
 .footer {
@@ -440,17 +416,17 @@ dialog {
   max-height: 90vh;
   overflow: auto;
   padding: 0;
-  box-shadow: 0 30px 100px #0009;
+  box-shadow: 0 30px 100px #1a2e2459;
 }
 dialog::backdrop {
-  background: #050915d9;
+  background: #14231cb3;
   backdrop-filter: blur(5px);
 }
 .dialogpad {
   padding: 30px;
 }
 .dialogpad h2 {
-  font: 800 28px Manrope;
+  font: 800 28px Fraunces;
   letter-spacing: -1px;
   margin: 0 0 8px;
 }
@@ -501,7 +477,7 @@ dialog::backdrop {
   margin: auto;
 }
 .article h1 {
-  font: 800 clamp(31px,4vw,50px)/1.15 Manrope;
+  font: 800 clamp(31px,4vw,50px)/1.15 Fraunces;
   letter-spacing: -2px;
 }
 .article .body {
@@ -720,7 +696,7 @@ dialog#editor-dialog {
   border-radius: 16px;
   border: 1px dashed var(--line);
   overflow: hidden;
-  background: linear-gradient(120deg,#1a2850,#392b64);
+  background: linear-gradient(120deg,#173d31,#1f6b52);
 }
 .cover-preview img {
   width: 100%;
@@ -734,7 +710,7 @@ dialog#editor-dialog {
   display: grid;
   place-items: center;
   min-height: 160px;
-  color: #d2d6f2;
+  color: #eaf1e6;
   font-size: 16px;
   text-align: center;
   padding: 18px;
@@ -745,7 +721,7 @@ dialog#editor-dialog {
   left: 0;
   right: 0;
   padding: 8px 12px;
-  background: #321f37df;
+  background: #17392fe6;
   color: white;
   font-size: 13px;
 }
@@ -781,7 +757,63 @@ dialog#editor-dialog {
     font-size: 13px;
   }
 }
-  </style>
+  
+/* ===== The Journal: emerald and gold theme ===== */
+:root{--bg:#12251e;--surface:#1a3329;--surface2:#224036;--line:#38594b;--text:#f3f1e8;--muted:#b0c3b8;--purple:#6fcfad;--cyan:#e2b65e;--solid:#2c8466;--shadow:0 20px 60px #0a1a1459;color-scheme:dark}
+[data-theme=light]{--bg:#f7f6f1;--surface:#fff;--surface2:#eeece3;--line:#dcd8ca;--text:#22302a;--muted:#5a665f;--purple:#1d6a50;--cyan:#8f5d17;--solid:#1d6a50;--shadow:0 14px 40px #22302a1f;color-scheme:light}
+body{font-family:"DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.logo,.hero h1,.feature-visual h2,.section h2,.card h3,.band h2,.dialogpad h2,.article h1,.article h2,.metric b,.comment h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.015em}
+.hero h1{font-size:clamp(40px,5vw,64px);line-height:1.12;letter-spacing:-.025em}
+.feature-visual h2{font-size:32px;line-height:1.25}
+.section h2{font-size:clamp(28px,3vw,40px)}
+.eyebrow,.cat{text-transform:none;letter-spacing:.01em;font-weight:700;font-size:14px}
+.cat{color:var(--cyan)}
+.sub,.hero p,.excerpt{color:var(--muted)}
+.excerpt{display:-webkit-box;font-size:16px;line-height:1.7}
+.card h3{font-size:24px;line-height:1.3}
+.article{max-width:720px}
+.article .body{font-family:Newsreader,Georgia,serif;font-size:21px;line-height:1.85}
+.primary{background:var(--solid);border-color:var(--solid);color:#fff}
+.primary:hover{filter:brightness(1.12)}
+.chip.active{background:var(--solid);border-color:var(--solid);color:#fff}
+.avatar{background:var(--solid)}
+.card:hover{border-color:var(--purple);box-shadow:var(--shadow)}
+.band h2,.feature-visual h2{color:#fff}
+.hero .feature-visual p{color:#e6eee0}
+.band p{color:#e3ecdf}
+.band .btn.primary{background:#f3e3b6;border-color:#f3e3b6;color:#17392f}
+
+/* ===== Colour palettes (switch with the Colors button) ===== */
+html[data-palette=sage][data-theme=light]{--bg:#f5f7f3;--surface:#ffffff;--surface2:#e9eee6;--line:#d8e0d3;--text:#2f3a33;--muted:#5d6b62;--purple:#55745f;--cyan:#55745f;--solid:#55745f;--card:#4a6654;--cov:#b9ccbd;--shadow:0 10px 30px #1f2b2530;color-scheme:light}
+html[data-palette=sage][data-theme=dark]{--bg:#1f2b25;--surface:#2a3830;--surface2:#33443a;--line:#455a4d;--text:#eef2ec;--muted:#b7c6bb;--purple:#9cc3a8;--cyan:#9cc3a8;--solid:#4d6b58;--card:#3f5a49;--cov:#4d6657;--shadow:0 10px 30px #1f2b2530;color-scheme:dark}
+html[data-palette=walnut][data-theme=light]{--bg:#faf7f2;--surface:#ffffff;--surface2:#f0ebe3;--line:#e2d9cc;--text:#3a322b;--muted:#6c6258;--purple:#7a5c3e;--cyan:#7a5c3e;--solid:#7a5c3e;--card:#6b4f36;--cov:#cbb89f;--shadow:0 10px 30px #1f2b2530;color-scheme:light}
+html[data-palette=walnut][data-theme=dark]{--bg:#2e251d;--surface:#3a2f25;--surface2:#45382c;--line:#5a4a3b;--text:#f5efe6;--muted:#cdbfae;--purple:#d9b48a;--cyan:#d9b48a;--solid:#8a6544;--card:#5c4430;--cov:#6b5440;--shadow:0 10px 30px #1f2b2530;color-scheme:dark}
+html[data-palette=burgundy][data-theme=light]{--bg:#fbf8f6;--surface:#ffffff;--surface2:#f3eaea;--line:#e6d8da;--text:#3b2b2e;--muted:#6e5e61;--purple:#7d2e3d;--cyan:#7d2e3d;--solid:#7d2e3d;--card:#6a2634;--cov:#d9b8bd;--shadow:0 10px 30px #1f2b2530;color-scheme:light}
+html[data-palette=burgundy][data-theme=dark]{--bg:#2b1d20;--surface:#382a2d;--surface2:#433337;--line:#5a4448;--text:#f7eeee;--muted:#d2bcc0;--purple:#e0a3ae;--cyan:#e0a3ae;--solid:#8f3a4a;--card:#6a2634;--cov:#6e4750;--shadow:0 10px 30px #1f2b2530;color-scheme:dark}
+html[data-palette=rust][data-theme=light]{--bg:#faf7f4;--surface:#ffffff;--surface2:#f3ebe5;--line:#e6d9cf;--text:#3b2e28;--muted:#6e6058;--purple:#a14a2c;--cyan:#a14a2c;--solid:#a14a2c;--card:#8c3f25;--cov:#e0bfae;--shadow:0 10px 30px #1f2b2530;color-scheme:light}
+html[data-palette=rust][data-theme=dark]{--bg:#2d211b;--surface:#3a2d25;--surface2:#46372e;--line:#5c4a3e;--text:#f6eee8;--muted:#d3c1b4;--purple:#e6a287;--cyan:#e6a287;--solid:#a14a2c;--card:#8c3f25;--cov:#7a5444;--shadow:0 10px 30px #1f2b2530;color-scheme:dark}
+html[data-palette=grey][data-theme=light]{--bg:#f6f6f5;--surface:#ffffff;--surface2:#ececea;--line:#dcdcd9;--text:#2f3132;--muted:#626565;--purple:#4b5052;--cyan:#4b5052;--solid:#4b5052;--card:#4b5052;--cov:#c9cbcb;--shadow:0 10px 30px #1f2b2530;color-scheme:light}
+html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surface2:#404141;--line:#555757;--text:#f1f1ef;--muted:#bdbfbf;--purple:#d0d3d3;--cyan:#d0d3d3;--solid:#5d6264;--card:#4b5052;--cov:#5a5e5f;--shadow:0 10px 30px #1f2b2530;color-scheme:dark}
+.hero{background:none}
+.feature-visual,.band{background:var(--card)!important;border-color:transparent!important}
+.feature-visual:before,.feature-visual:after{display:none}
+.cover{background:var(--cov)!important}
+.cover .symbol{color:#ffffffaa}
+.band .btn.primary{background:#fff;border-color:#fff;color:var(--card)}
+.band .eyebrow{color:#ffffffd0!important}
+.cover-preview{background:var(--cov)}
+#toast{background:var(--card)!important;border-color:var(--solid)!important}
+.palette-wrap{position:relative}
+.palette-menu{position:absolute;right:0;top:calc(100% + 10px);width:236px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:var(--shadow);z-index:50}
+.palette-title{font-size:13px;color:var(--muted);padding:6px 10px 8px;margin:0}
+.palette-item{display:flex;align-items:center;gap:12px;width:100%;background:none;border:0;border-radius:10px;padding:10px;color:var(--text);font-weight:600;font-size:15px;text-align:left}
+.palette-item:hover{background:var(--surface2)}
+.palette-item[aria-checked=true]{background:var(--surface2)}
+.palette-item .tick{margin-left:auto;color:var(--purple);visibility:hidden}
+.palette-item[aria-checked=true] .tick{visibility:visible}
+.swatch{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);flex:none}
+@media (max-width:650px){.pal-label{display:none}.palette-menu{right:-60px}}
+</style>
  </head>
  <body>
   <nav class="top">
@@ -807,6 +839,7 @@ dialog#editor-dialog {
     </div>
     <div class="navuser" id="auth-area">
     </div>
+    <div class="palette-wrap"><button aria-expanded="false" aria-haspopup="true" aria-label="Change color combination" class="btn icon" id="palette-btn" type="button">◐<span class="pal-label"> Colors</span></button><div class="palette-menu hidden" id="palette-menu" role="menu"></div></div>
     <button aria-label="Toggle theme" class="btn icon" id="theme" onclick="toggleTheme()">
      ☼
     </button>
@@ -816,37 +849,28 @@ dialog#editor-dialog {
    <div class="wrap hero-in">
     <div>
      <span class="eyebrow">
-      ✦ Independent voices. Extraordinary stories.
+      Independent writing, carefully curated
      </span>
-     <h1>
-      Ideas deserve
-      <br/>
-      to be
-      <span class="grad">
-       discovered.
-      </span>
-     </h1>
-     <p>
-      More than a blog. A home for independent thinkers, curious readers, and writers with something to say.
-     </p>
+     <h1>Where good ideas<br/>find their readers.</h1>
+     <p>The Journal is a publishing platform for independent writers and curious readers. Share your perspective, build an audience, and discover stories you will not find anywhere else.</p>
      <div class="actions">
       <button class="btn primary" onclick="document.querySelector('#stories').scrollIntoView({behavior:'smooth'})">
-       Explore stories ↗
+       Browse stories
       </button>
       <button class="btn" onclick="openEditor()">
-       ✎ Start writing
+       Start writing
       </button>
      </div>
     </div>
     <div class="feature-visual">
      <span class="pill">
-      THE JOURNAL / EDITOR'S NOTE
+      From the editor
      </span>
      <h2>
-      Good stories connect us. Great stories stay with us.
+      Good writing informs. Great writing stays with you.
      </h2>
      <p>
-      Read deeply. Write freely. Find your people.
+      Read widely, write honestly, and find readers who care about the same ideas.
      </p>
     </div>
    </div>
@@ -857,9 +881,7 @@ dialog#editor-dialog {
      0
     </b>
     <small>
-     Published
-     <br/>
-     stories
+     Stories<br/>published
     </small>
    </div>
    <div class="metric">
@@ -867,19 +889,13 @@ dialog#editor-dialog {
      0
     </b>
     <small>
-     Creative
-     <br/>
-     voices
+     Active<br/>writers
     </small>
    </div>
    <div class="metric">
-    <b>
-     ∞
-    </b>
+    <b>Free</b>
     <small>
-     Ideas worth
-     <br/>
-     sharing
+     to read<br/>and write
     </small>
    </div>
   </div>
@@ -888,24 +904,21 @@ dialog#editor-dialog {
     <div class="sectionhead">
      <div>
       <span class="eyebrow">
-       Discover / Read / Connect
+       Latest stories
       </span>
       <h2>
        Stories for curious minds
-       <span class="grad">
-        .
-       </span>
       </h2>
       <p class="sub">
-       Fresh perspectives from independent writers.
+       Fresh perspectives from independent writers, added as they publish.
       </p>
      </div>
      <button class="btn" id="mine-button" onclick="showMine()">
-      My studio ↗
+      My studio
      </button>
     </div>
     <div class="searchrow">
-     <input aria-label="Search articles" class="search" id="search" placeholder="⌕ Search articles, topics or authors..." type="search"/>
+     <input aria-label="Search articles" class="search" id="search" placeholder="Search stories, topics or writers" type="search"/>
      <div class="chips" id="chips">
      </div>
     </div>
@@ -919,16 +932,13 @@ dialog#editor-dialog {
     <div class="sectionhead">
      <div>
       <span class="eyebrow">
-       Meet the community
+       Our writers
       </span>
       <h2>
-       Independent voices
-       <span class="grad">
-        .
-       </span>
+       Meet the writers
       </h2>
       <p class="sub">
-       Get to know the people behind the stories.
+       Follow the people behind the stories you enjoy.
       </p>
      </div>
     </div>
@@ -938,18 +948,18 @@ dialog#editor-dialog {
    <section class="wrap">
     <div class="band">
      <div>
-      <span class="eyebrow" style="color:#d3c7ff">
-       YOUR VOICE MATTERS
+      <span class="eyebrow" style="color:#f0dca8">
+       Write for The Journal
       </span>
       <h2>
-       Have a story to tell?
+       Have something to say?
       </h2>
       <p>
-       Start writing, publish your perspective and build your community.
+       Publish your first story in minutes. Save drafts, add a cover image, and build a readership.
       </p>
      </div>
      <button class="btn primary" onclick="openEditor()">
-      Become a writer ↗
+      Start writing
      </button>
     </div>
    </section>
@@ -963,7 +973,7 @@ dialog#editor-dialog {
      · Independent stories, shared ideas.
     </span>
     <span>
-     Made for readers & writers · Node.js + SQLite
+     © 2026 The Journal. All rights reserved.
     </span>
    </div>
   </footer>
@@ -973,7 +983,7 @@ dialog#editor-dialog {
      Welcome back
     </h2>
     <p class="sub" id="auth-sub">
-     Sign in to your writer account.
+     Sign in to write, comment and save stories.
     </p>
     <label class="field hidden" id="username-field">
      Username
@@ -994,7 +1004,7 @@ dialog#editor-dialog {
       Cancel
      </button>
      <button class="btn primary" id="auth-submit" type="submit">
-      Sign in →
+      Sign in
      </button>
     </div>
     <p class="mini">
@@ -1007,13 +1017,13 @@ dialog#editor-dialog {
   <dialog id="editor-dialog">
    <form class="dialogpad" id="editor-form">
     <span class="eyebrow">
-     THE WRITER STUDIO
+     Writer studio
     </span>
     <h2 id="editor-heading">
      Create a story
     </h2>
     <p class="sub">
-     Write something worth sharing with the world.
+     Add a headline, choose a topic and write your story. Save it as a draft or publish it now.
     </p>
     <label class="field">
      Headline
@@ -1080,7 +1090,7 @@ dialog#editor-dialog {
       Save draft
      </button>
      <button class="btn primary" name="action" type="submit" value="published">
-      Publish story ↗
+      Publish story
      </button>
     </div>
    </form>
@@ -1104,7 +1114,7 @@ dialog#editor-dialog {
      </button>
     </div>
     <span class="eyebrow">
-     WRITER DASHBOARD
+     Writer dashboard
     </span>
     <h2>
      My studio
@@ -1127,7 +1137,7 @@ dialog#editor-dialog {
     </div>
    </div>
   </dialog>
-  <div id="toast" style="position:fixed;bottom:22px;right:22px;background:#282044;color:white;border:1px solid #7656f5;border-radius:12px;padding:12px 18px;display:none;z-index:60">
+  <div id="toast" style="position:fixed;bottom:22px;right:22px;background:#1b3d32;color:white;border:1px solid #2f8a6b;border-radius:12px;padding:12px 18px;display:none;z-index:60">
   </div>
   <script>
    const $=id=>document.getElementById(id);let me=null,posts=[],writers=[],editingId=null,currentPost=null,authMode='login',filter='All';
@@ -1179,15 +1189,15 @@ async function api(url, opts = {}) {
   return data;
 }
 function toggleTheme(){const light=document.documentElement.dataset.theme==='light';document.documentElement.dataset.theme=light?'dark':'light';localStorage.setItem('journal-theme',light?'dark':'light')}
-document.documentElement.dataset.theme=localStorage.getItem('journal-theme')||'dark';
-function authUI(){ $('auth-area').innerHTML=me?`<button class="btn" onclick="showMine()">✎ My studio</button><button class="btn primary" onclick="openEditor()">Write ↗</button><button class="btn icon" onclick="logout()" title="Sign out">↪</button>`:`<button class="btn" onclick="openAuth('login')">Sign in</button><button class="btn primary" onclick="openAuth('signup')">Join free ↗</button>`}
-function openAuth(mode='login'){authMode=mode;$('auth-heading').textContent=mode==='login'?'Welcome back':'Join The Journal';$('auth-sub').textContent=mode==='login'?'Sign in to continue your journey.':'Create your writer account.';$('username-field').classList.toggle('hidden',mode==='login');$('auth-username').required=mode==='signup';$('auth-submit').textContent=mode==='login'?'Sign in →':'Create account →';$('auth-switch').textContent=mode==='login'?'New here? Create an account':'Already a member? Sign in';$('auth-error').textContent='';$('auth-password').value='';$('auth-dialog').showModal()}
+document.documentElement.dataset.theme=localStorage.getItem('journal-theme')||'light';
+function authUI(){ $('auth-area').innerHTML=me?`<button class="btn" onclick="showMine()">✎ My studio</button><button class="btn primary" onclick="openEditor()">Write</button><button class="btn icon" onclick="logout()" title="Sign out">↪</button>`:`<button class="btn" onclick="openAuth('login')">Sign in</button><button class="btn primary" onclick="openAuth('signup')">Join free</button>`}
+function openAuth(mode='login'){authMode=mode;$('auth-heading').textContent=mode==='login'?'Welcome back':'Join The Journal';$('auth-sub').textContent=mode==='login'?'Sign in to write, comment and save stories.':'Create a free account to start publishing.';$('username-field').classList.toggle('hidden',mode==='login');$('auth-username').required=mode==='signup';$('auth-submit').textContent=mode==='login'?'Sign in':'Create account';$('auth-switch').textContent=mode==='login'?'New here? Create an account':'Already a member? Sign in';$('auth-error').textContent='';$('auth-password').value='';$('auth-dialog').showModal()}
 $('auth-switch').onclick=e=>{e.preventDefault();closeDialog('auth-dialog');openAuth(authMode==='login'?'signup':'login')};
 $('auth-form').onsubmit=async e=>{e.preventDefault();try{const body={email:$('auth-email').value,password:$('auth-password').value};if(authMode==='signup')body.username=$('auth-username').value;const data=await api('/api/'+(authMode==='login'?'login':'signup'),{method:'POST',body:JSON.stringify(body)});me=data.user;closeDialog('auth-dialog');authUI();toast('Welcome, '+me.username+'!');await refresh()}catch(err){$('auth-error').textContent=err.message}};
 async function logout(){await api('/api/logout',{method:'POST'});me=null;authUI();toast('Signed out');await refresh()}
-function card(p){const image=p.cover_image?`<img src="${esc(p.cover_image)}" alt="" loading="lazy" onerror="this.remove()">`:'<span class="symbol">✦</span>';return `<article class="card"><div class="cover">${image}</div><div class="cardbody"><span class="cat">${esc(p.category||'General')}</span><h3 onclick="openStory(${p.id})">${esc(p.title)}</h3><p class="excerpt">${esc(p.body)}</p><div class="byline"><span class="avatar">${esc((p.author||'A')[0].toUpperCase())}</span><span>${esc(p.author||'Anonymous')} · ${fmt(p.published_at||p.created_at)} · ${minutes(p)} min read</span></div><button class="btn" style="margin-top:15px" onclick="openStory(${p.id})">Read story ↗</button></div></article>`}
-function render(){const term=$('search').value.trim().toLowerCase();const found=posts.filter(p=>(filter==='All'||(p.category||'General')===filter)&&[p.title,p.body,p.author,p.category,...(p.tags||[])].join(' ').toLowerCase().includes(term));$('stories-grid').innerHTML=found.length?found.map(card).join(''):`<div class="empty"><h3>No stories found yet</h3><p>Try another topic, or be the first to publish something.</p><button class="btn primary" onclick="openEditor()">Write a story ↗</button></div>`;$('total-posts').textContent=posts.length;$('total-writers').textContent=writers.length;const cats=['All',...new Set(posts.map(p=>p.category||'General'))];$('chips').innerHTML=cats.map(c=>`<button class="chip ${filter===c?'active':''}" onclick="filter=${JSON.stringify(c).replace(/"/g,'&quot;')};render()">${esc(c)}</button>`).join('')}
-function renderWriters(){$('writers-grid').innerHTML=writers.length?writers.map(w=>`<div class="writer"><span class="avatar">${esc(w.username[0].toUpperCase())}</span><div style="flex:1"><b>${esc(w.username)}</b><div class="mini">${w.stories} published stories</div></div><button class="btn" onclick="openWriter(${w.id})">Profile ↗</button></div>`).join(''):'<div class="empty">Writers will appear here after signup.</div>'}
+function card(p){const image=p.cover_image?`<img src="${esc(p.cover_image)}" alt="" loading="lazy" onerror="this.remove()">`:'<span class="symbol">✦</span>';return `<article class="card"><div class="cover">${image}</div><div class="cardbody"><span class="cat">${esc(p.category||'General')}</span><h3 onclick="openStory(${p.id})">${esc(p.title)}</h3><p class="excerpt">${esc(p.body)}</p><div class="byline"><span class="avatar">${esc((p.author||'A')[0].toUpperCase())}</span><span>${esc(p.author||'Anonymous')} · ${fmt(p.published_at||p.created_at)} · ${minutes(p)} min read</span></div><button class="btn" style="margin-top:15px" onclick="openStory(${p.id})">Read story</button></div></article>`}
+function render(){const term=$('search').value.trim().toLowerCase();const found=posts.filter(p=>(filter==='All'||(p.category||'General')===filter)&&[p.title,p.body,p.author,p.category,...(p.tags||[])].join(' ').toLowerCase().includes(term));$('stories-grid').innerHTML=found.length?found.map(card).join(''):`<div class="empty"><h3>No stories found yet</h3><p>Try another topic, or be the first to publish something.</p><button class="btn primary" onclick="openEditor()">Write a story</button></div>`;$('total-posts').textContent=posts.length;$('total-writers').textContent=writers.length;const cats=['All',...new Set(posts.map(p=>p.category||'General'))];$('chips').innerHTML=cats.map(c=>`<button class="chip ${filter===c?'active':''}" onclick="filter=${JSON.stringify(c).replace(/"/g,'&quot;')};render()">${esc(c)}</button>`).join('')}
+function renderWriters(){$('writers-grid').innerHTML=writers.length?writers.map(w=>`<div class="writer"><span class="avatar">${esc(w.username[0].toUpperCase())}</span><div style="flex:1"><b>${esc(w.username)}</b><div class="mini">${w.stories} published stories</div></div><button class="btn" onclick="openWriter(${w.id})">Profile</button></div>`).join(''):'<div class="empty">Writers will appear here after signup.</div>'}
 async function refresh(){try{[posts,writers]=await Promise.all([api('/api/posts'),api('/api/writers')]);render();renderWriters()}catch(e){$('stories-grid').innerHTML=`<div class="empty">Could not load stories: ${esc(e.message)}</div>`}}
 $('search').oninput=render;
 let coverUploading=false;
@@ -1221,7 +1231,7 @@ $('post-cover-file').addEventListener('change',async e=>{
 });
 function openEditor(p=null){if(!me){openAuth('login');return}editingId=p?.id??null;$('editor-heading').textContent=p?'Edit story':'Create a story';$('post-title').value=p?.title||'';$('post-body').value=p?.body||'';$('post-cover').value=p?.cover_image||'';$('cover-status').textContent='';previewCover();$('post-tags').value=(p?.tags||[]).join(', ');$('post-category').value=p?.category||'General';$('editor-error').textContent='';$('editor-dialog').showModal()}
 $('editor-form').onsubmit=async e=>{e.preventDefault();if(coverUploading){$('editor-error').textContent='Wait for the cover image upload to finish.';return}const action=e.submitter?.value||'published';const payload={title:$('post-title').value,body:$('post-body').value,category:$('post-category').value,cover_image:$('post-cover').value,tags:$('post-tags').value.split(',').map(s=>s.trim()).filter(Boolean),status:action};try{if(editingId){await api('/api/posts/'+editingId,{method:'PUT',body:JSON.stringify(payload)});if(action==='published')await api('/api/posts/'+editingId+'/publish',{method:'PATCH'})}else await api('/api/posts',{method:'POST',body:JSON.stringify(payload)});closeDialog('editor-dialog');toast(action==='draft'?'Draft saved':'Story published');await refresh()}catch(err){$('editor-error').textContent=err.message}};
-async function openStory(id){try{const p=await api('/api/posts/'+id);currentPost=p;const social=await api('/api/posts/'+id+'/social');$('article').innerHTML=`<span class="eyebrow">${esc(p.category||'General')} · ${minutes(p)} MIN READ</span><h1>${esc(p.title)}</h1><p class="sub">By ${esc(p.author)} · ${fmt(p.published_at||p.created_at)}</p><div class="divider"></div>${p.cover_image?`<img class="heroimage" src="${esc(p.cover_image)}" alt="Article cover">`:''}<div class="body">${esc(p.body)}</div><div class="divider"></div><div class="row"><button class="btn" id="like-btn" onclick="socialToggle('like')">♡ ${social.likes} likes</button><button class="btn" id="bookmark-btn" onclick="socialToggle('bookmark')">${social.bookmarked?'★':'☆'} Bookmark</button><span class="mini">${social.views} views</span></div><div class="divider"></div><h2>Conversation</h2><div id="comments">Loading...</div><form id="comment-form" class="hidden"><label class="field">Add your thoughts<textarea id="comment-body" maxlength="2000" required style="min-height:100px"></textarea></label><button class="btn primary" type="submit">Post comment →</button></form><p id="comment-prompt" class="mini">Sign in to join the conversation.</p>`;$('reader-dialog').showModal();$('comment-form').classList.toggle('hidden',!me);$('comment-prompt').classList.toggle('hidden',!!me);$('comment-form').onsubmit=submitComment;await loadComments()}catch(e){toast(e.message)}}
+async function openStory(id){try{const p=await api('/api/posts/'+id);currentPost=p;const social=await api('/api/posts/'+id+'/social');$('article').innerHTML=`<span class="eyebrow">${esc(p.category||'General')} · ${minutes(p)} min read</span><h1>${esc(p.title)}</h1><p class="sub">By ${esc(p.author)} · ${fmt(p.published_at||p.created_at)}</p><div class="divider"></div>${p.cover_image?`<img class="heroimage" src="${esc(p.cover_image)}" alt="Article cover">`:''}<div class="body">${esc(p.body)}</div><div class="divider"></div><div class="row"><button class="btn" id="like-btn" onclick="socialToggle('like')">♡ ${social.likes} likes</button><button class="btn" id="bookmark-btn" onclick="socialToggle('bookmark')">${social.bookmarked?'★':'☆'} Bookmark</button><span class="mini">${social.views} views</span></div><div class="divider"></div><h2>Conversation</h2><div id="comments">Loading...</div><form id="comment-form" class="hidden"><label class="field">Add your thoughts<textarea id="comment-body" maxlength="2000" required style="min-height:100px"></textarea></label><button class="btn primary" type="submit">Post comment</button></form><p id="comment-prompt" class="mini">Sign in to join the conversation.</p>`;$('reader-dialog').showModal();$('comment-form').classList.toggle('hidden',!me);$('comment-prompt').classList.toggle('hidden',!!me);$('comment-form').onsubmit=submitComment;await loadComments()}catch(e){toast(e.message)}}
 async function socialToggle(kind){if(!me){toast('Sign in to interact with stories');return}try{await api(`/api/posts/${currentPost.id}/${kind}`,{method:'POST'});const s=await api(`/api/posts/${currentPost.id}/social`);$('like-btn').textContent=`${s.liked?'♥':'♡'} ${s.likes} likes`;$('bookmark-btn').textContent=`${s.bookmarked?'★':'☆'} Bookmark`}catch(e){toast(e.message)}}
 async function loadComments(){const cs=await api(`/api/posts/${currentPost.id}/comments`);$('comments').innerHTML=cs.length?cs.map(c=>`<div class="comment"><b>${esc(c.username)}</b><span class="mini"> · ${fmt(c.created_at)}</span><p>${esc(c.body)}</p>${me?.id===c.user_id?`<button class="btn" onclick="deleteComment(${c.id})">Delete</button>`:''}</div>`).join(''):'<p class="sub">No comments yet. Start the conversation.</p>'}
 async function submitComment(e){e.preventDefault();try{await api(`/api/posts/${currentPost.id}/comments`,{method:'POST',body:JSON.stringify({body:$('comment-body').value})});$('comment-body').value='';await loadComments()}catch(e){toast(e.message)}}
@@ -1229,10 +1239,25 @@ async function deleteComment(id){if(!confirm('Delete this comment?'))return;awai
 async function showMine(){if(!me){openAuth('login');return}try{const [own,stats]=await Promise.all([api('/api/me/posts'),api('/api/me/dashboard')]);$('studio-content').innerHTML=`<p class="sub">${stats.published} published · ${stats.drafts} drafts · ${stats.views} views · ${stats.likes} likes</p><div class="divider"></div><button class="btn primary" onclick="closeDialog('studio-dialog');openEditor()">+ New story</button>${own.map(p=>`<div class="comment"><span class="cat">${esc(p.status)} · ${esc(p.category||'General')}</span><h3>${esc(p.title)}</h3><div class="row"><button class="btn" onclick="closeDialog('studio-dialog');openEditor(${JSON.stringify(p).replace(/"/g,'&quot;')})">Edit</button>${p.status==='draft'?`<button class="btn primary" onclick="publishDraft(${p.id})">Publish</button>`:`<button class="btn" onclick="closeDialog('studio-dialog');openStory(${p.id})">Read</button>`}<button class="btn" onclick="deleteStory(${p.id})">Delete</button></div></div>`).join('')||'<p class="sub">No stories yet.</p>'}`;$('studio-dialog').showModal()}catch(e){toast(e.message)}}
 async function publishDraft(id){try{await api('/api/posts/'+id+'/publish',{method:'PATCH'});closeDialog('studio-dialog');toast('Published!');await refresh();showMine()}catch(e){toast(e.message)}}
 async function deleteStory(id){if(!confirm('Permanently delete this story?'))return;try{await api('/api/posts/'+id,{method:'DELETE'});closeDialog('studio-dialog');toast('Story deleted');await refresh();showMine()}catch(e){toast(e.message)}}
-async function showSaved(){if(!me){openAuth('login');return}try{const ps=await api('/api/me/bookmarks');$('saved-content').innerHTML=ps.map(p=>`<div class="comment"><h3>${esc(p.title)}</h3><button class="btn" onclick="closeDialog('saved-dialog');openStory(${p.id})">Read →</button></div>`).join('')||'<p class="sub">No bookmarks yet.</p>';$('saved-dialog').showModal()}catch(e){toast(e.message)}}
-async function openWriter(id){try{const w=await api('/api/writers/'+id);$('saved-content').innerHTML=`<h2>${esc(w.username)}</h2><p class="sub">${w.followers} followers · ${w.posts.length} published stories</p><button class="btn primary" onclick="followWriter(${w.id})">Follow / Unfollow</button>${w.posts.map(p=>`<div class="comment"><h3>${esc(p.title)}</h3><button class="btn" onclick="closeDialog('saved-dialog');openStory(${p.id})">Read →</button></div>`).join('')}`;$('saved-dialog').showModal()}catch(e){toast(e.message)}}
+async function showSaved(){if(!me){openAuth('login');return}try{const ps=await api('/api/me/bookmarks');$('saved-content').innerHTML=ps.map(p=>`<div class="comment"><h3>${esc(p.title)}</h3><button class="btn" onclick="closeDialog('saved-dialog');openStory(${p.id})">Read</button></div>`).join('')||'<p class="sub">No bookmarks yet.</p>';$('saved-dialog').showModal()}catch(e){toast(e.message)}}
+async function openWriter(id){try{const w=await api('/api/writers/'+id);$('saved-content').innerHTML=`<h2>${esc(w.username)}</h2><p class="sub">${w.followers} followers · ${w.posts.length} published stories</p><button class="btn primary" onclick="followWriter(${w.id})">Follow / Unfollow</button>${w.posts.map(p=>`<div class="comment"><h3>${esc(p.title)}</h3><button class="btn" onclick="closeDialog('saved-dialog');openStory(${p.id})">Read</button></div>`).join('')}`;$('saved-dialog').showModal()}catch(e){toast(e.message)}}
 async function followWriter(id){if(!me){toast('Sign in to follow writers');return}try{const r=await api(`/api/writers/${id}/follow`,{method:'POST'});toast(r.following?'Writer followed':'Unfollowed');openWriter(id)}catch(e){toast(e.message)}}
 (async()=>{try{me=(await api('/api/me')).user}catch{}authUI();await refresh()})();
-  </script>
+  
+const PALETTES=[{id:'sage',name:'Soft sage',a:'#55745f',b:'#f5f7f3'},{id:'walnut',name:'Walnut brown',a:'#7a5c3e',b:'#faf7f2'},{id:'burgundy',name:'Burgundy',a:'#7d2e3d',b:'#fbf8f6'},{id:'rust',name:'Rust clay',a:'#a14a2c',b:'#faf7f4'},{id:'grey',name:'Minimal grey',a:'#4b5052',b:'#f6f6f5'}];
+function paletteId(){return document.documentElement.dataset.palette||'sage'}
+function markPalette(){document.querySelectorAll('.palette-item').forEach(b=>b.setAttribute('aria-checked',b.dataset.id===paletteId()))}
+function setPalette(id){document.documentElement.dataset.palette=id;try{localStorage.setItem('journal-palette',id)}catch(e){}markPalette()}
+function closePalette(){$('palette-menu').classList.add('hidden');$('palette-btn').setAttribute('aria-expanded','false')}
+(function(){
+ const menu=$('palette-menu');
+ menu.innerHTML='<p class="palette-title">Color combination</p>'+PALETTES.map(p=>`<button class="palette-item" role="menuitemradio" aria-checked="false" data-id="${p.id}" type="button"><span class="swatch" style="background:linear-gradient(135deg,${p.a} 50%,${p.b} 50%)"></span>${p.name}<span class="tick">✓</span></button>`).join('');
+ markPalette();
+ $('palette-btn').onclick=e=>{e.stopPropagation();const open=menu.classList.toggle('hidden')===false;$('palette-btn').setAttribute('aria-expanded',String(open))};
+ menu.onclick=e=>{const b=e.target.closest('.palette-item');if(!b)return;setPalette(b.dataset.id);toast('Color combination: '+PALETTES.find(p=>p.id===b.dataset.id).name);closePalette()};
+ document.addEventListener('click',e=>{if(!e.target.closest('.palette-wrap'))closePalette()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closePalette()});
+})();
+</script>
  </body>
 </html>
