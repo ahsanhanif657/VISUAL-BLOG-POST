@@ -5,8 +5,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const dataDir = path.join(root, 'data');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)));
+// Vercel's filesystem is read-only except /tmp (which is ephemeral).
+const dataDir = process.env.VERCEL ? '/tmp/data' : path.join(root, 'data');
 fs.mkdirSync(dataDir, { recursive: true });
 const db = new DatabaseSync(path.join(dataDir, 'blog.db'));
 db.exec(`PRAGMA foreign_keys = ON;
@@ -242,6 +243,8 @@ app.get('/api/me/dashboard',(req,res)=>{const u=requireUser(req,res);if(!u)retur
 app.use(express.static(path.join(root,'public')));
 app.get('/',(_req,res)=>res.sendFile(path.join(root,'public','index.html')));
 app.use((err,req,res,next)=>{console.error(err);if(res.headersSent)return next(err);res.status(err.status||500).json({error:err.status===400?'Invalid request.':'Internal server error.'});});
-const port=Number(process.env.PORT)||3001;
-app.listen(port,()=>console.log(`The Journal running at http://localhost:${port} (SQLite ready)`));
+if(!process.env.VERCEL){
+ const port=Number(process.env.PORT)||3001;
+ app.listen(port,()=>console.log(`The Journal running at http://localhost:${port} (SQLite ready)`));
+}
 export default app;

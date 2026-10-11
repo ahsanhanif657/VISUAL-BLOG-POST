@@ -6,7 +6,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const dataDir = path.join(root, 'data');
+const dataDir = process.env.VERCEL
+  ? '/tmp/the-journal-data'
+  : path.join(root, 'data');
 fs.mkdirSync(dataDir, { recursive: true });
 const db = new DatabaseSync(path.join(dataDir, 'blog.db'));
 db.exec(`PRAGMA foreign_keys = ON;

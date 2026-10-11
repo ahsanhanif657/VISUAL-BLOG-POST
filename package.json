@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "The Journal full-stack blog with SQLite and Express",
-  "scripts": { "start": "node src/server.js", "dev": "node --watch src/server.js" },
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
   "dependencies": { "express": "^5.2.1" },
   "engines": { "node": ">=22.13.0" }
 }
