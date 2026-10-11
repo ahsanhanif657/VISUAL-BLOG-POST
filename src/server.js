@@ -244,3 +244,4 @@ app.get('/',(_req,res)=>res.sendFile(path.join(root,'public','index.html')));
 app.use((err,req,res,next)=>{console.error(err);if(res.headersSent)return next(err);res.status(err.status||500).json({error:err.status===400?'Invalid request.':'Internal server error.'});});
 const port=Number(process.env.PORT)||3001;
 app.listen(port,()=>console.log(`The Journal running at http://localhost:${port} (SQLite ready)`));
+export default app;
