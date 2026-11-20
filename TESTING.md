@@ -11,4 +11,7 @@
 - [ ] Post and delete your own comment.
 - [ ] Open author profile and follow a different account.
 - [ ] Restart the server; data persists.
-- [ ] Check responsive layout in Chrome DevTools.
+- [ ] Check desktop layout at 1280px and tablet layout at 768px; confirm the hero and article grid reflow cleanly.
+- [ ] Check phone layouts at 390px and 320px; confirm there is no horizontal overflow and the navigation menu opens/closes.
+- [ ] From the phone navigation, verify sign-in, writer studio, sign-out, bookmarks, and color-palette actions are available.
+- [ ] Confirm theme and color-palette controls remain usable on mobile and desktop.

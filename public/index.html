@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>The Journal — Thoughtful writing from independent voices</title>
+  <meta name="description" content="The Journal — practical tutorials, fresh ideas, and stories for developers and curious minds."/>
+  <title>The Journal — Read. Learn. Share.</title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Newsreader:opsz,wght@6..72,400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <script>try{var d=document.documentElement;d.dataset.theme=localStorage.getItem('journal-theme')||'light';d.dataset.palette=localStorage.getItem('journal-palette')||'sage'}catch(e){document.documentElement.dataset.palette='sage'}</script>
+  <script>try{var d=document.documentElement;d.dataset.theme=localStorage.getItem('journal-theme')||'light';d.dataset.palette=localStorage.getItem('journal-palette')||'violet'}catch(e){document.documentElement.dataset.palette='violet'}</script>
   <style>
    
 
@@ -813,6 +814,149 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
 .palette-item[aria-checked=true] .tick{visibility:visible}
 .swatch{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);flex:none}
 @media (max-width:650px){.pal-label{display:none}.palette-menu{right:-60px}}
+
+/* Responsive developer-editorial homepage */
+html[data-palette=violet][data-theme=light]{--bg:#f7f7fb;--surface:#fff;--surface2:#f1eef8;--line:#e5e2ec;--text:#20202a;--muted:#777582;--purple:#7745cf;--cyan:#7745cf;--solid:#7745cf;--card:#231d30;--cov:#e7def6;--shadow:0 12px 32px #21193416;color-scheme:light}
+html[data-palette=violet][data-theme=dark]{--bg:#17151e;--surface:#211e2a;--surface2:#2b2736;--line:#3a3547;--text:#f4f1f8;--muted:#bbb5c7;--purple:#b698ff;--cyan:#b698ff;--solid:#8052d6;--card:#282033;--cov:#45375f;--shadow:0 12px 32px #08060d66;color-scheme:dark}
+.top{background:#17161d;color:#f8f7fb;border-color:#2b2932}
+.top .nav{position:relative;height:72px;gap:22px}
+.top .logo{color:#fff;font:800 22px Manrope,"DM Sans",sans-serif;letter-spacing:-.7px}
+.top .logo span{color:#a46eff}
+.top .navlinks{gap:25px;margin-left:20px;font-size:13px;color:#c3bfcb}
+.top .navlinks a:hover,.top .navlinks button:hover{color:#fff}
+.top .navlinks button{font:inherit}
+.top .navlinks .palette-wrap{flex:none}
+.top .navlinks .palette-wrap>.btn{padding:8px 11px}
+.top .navlinks .palette-menu{right:0;top:calc(100% + 7px)}
+.top .btn{border-color:#393641;background:#24222b;color:#f8f7fb;border-radius:9px}
+.top .btn.primary{background:#8652de;border-color:#8652de;color:#fff}
+.top .btn:hover{border-color:#a178ed}
+.hero{background:var(--bg);border:0}
+.hero-in{grid-template-columns:.9fr 1.1fr;gap:50px;padding-top:62px;padding-bottom:58px}
+.hero .eyebrow{letter-spacing:.08em;font-size:12px}
+.hero h1{font:800 clamp(42px,5.2vw,68px)/1.08 Manrope,"DM Sans",sans-serif;letter-spacing:-.055em;margin:19px 0}
+.hero h1 .grad{background:linear-gradient(100deg,#7543cc,#a866eb);color:transparent;background-clip:text}
+.hero p{max-width:490px;font-size:17px;line-height:1.7}
+.hero .actions{margin-top:24px}
+.hero .primary{background:#8652de;border-color:#8652de}
+.hero .actions .btn{border-radius:8px}
+.feature-visual{min-height:360px;padding:27px;border:0;border-radius:17px;background:#282333;isolation:isolate}
+.feature-visual:before{display:none}
+.feature-visual:after{width:100%;height:100%;inset:0;border:0;border-radius:0;background:linear-gradient(0deg,#111018e8 0%,#11101830 55%,#11101800 100%);box-shadow:none;z-index:0}
+.feature-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+.feature-visual .pill{border:0;background:#8652de;color:#fff;font-size:10px;letter-spacing:.08em}
+.feature-visual h2{max-width:460px;font:800 clamp(25px,3vw,36px)/1.16 Manrope,"DM Sans",sans-serif;letter-spacing:-.04em}
+.feature-visual p{max-width:440px;font-size:14px;color:#e3e0e9}
+.metrics{gap:38px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metric b{font:800 25px Manrope,"DM Sans",sans-serif}
+.metric small{font-size:11px;line-height:1.35}
+.section{padding:55px 0}
+.sectionhead{align-items:center;margin-bottom:23px}
+.section h2{font:800 clamp(26px,3vw,36px)/1.2 Manrope,"DM Sans",sans-serif;letter-spacing:-.045em}
+.section .eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.sectionhead .btn{white-space:nowrap}
+.searchrow{margin:21px 0 24px}
+.search{min-height:46px;border-radius:9px;background:var(--surface);font-size:14px}
+.chips{gap:7px;scrollbar-width:none}
+.chip{padding:8px 13px;border-radius:7px;font-size:12px}
+.chip.active{background:#8652de;border-color:#8652de}
+.grid{gap:19px}
+.card{border-radius:12px;box-shadow:0 2px 8px #17131e0a}
+.card:hover{transform:translateY(-3px)}
+.cover{height:180px;background:linear-gradient(135deg,#282238,#5d3787 55%,#244b58)}
+.cover img{transition:transform .35s}
+.card:hover .cover img{transform:scale(1.035)}
+.cover .symbol{font-size:52px;color:#ffffff88}
+.cardbody{padding:17px}
+.cat{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--purple)}
+.card h3{font:750 18px/1.35 Manrope,"DM Sans",sans-serif;letter-spacing:-.025em;margin:8px 0}
+.excerpt{font-size:13px;line-height:1.55;min-height:60px}
+.byline{gap:8px;margin-top:14px;padding-top:12px;font-size:11px;line-height:1.4}
+.avatar{width:27px;height:27px;font-size:11px}
+.cardbody>.btn{margin-top:14px!important;padding:8px 12px;font-size:12px;border-radius:7px}
+.writer{border-radius:11px;padding:15px}
+.band{margin:8px 0 48px;padding:34px;border-radius:15px;background:#282333!important}
+.band h2{font:800 29px/1.2 Manrope,"DM Sans",sans-serif;letter-spacing:-.035em}
+.band .eyebrow{font-size:11px}
+.band .btn.primary{background:#8652de;border-color:#8652de;color:white}
+.footer{padding:25px 0}
+.menu-toggle{display:none}
+.mobile-account,.mobile-logout{display:none}
+html{scroll-padding-top:82px}
+@media(max-width:950px){
+  .top .nav{gap:14px}
+  .top .navlinks{gap:16px;margin-left:4px}
+  .hero-in{grid-template-columns:.9fr 1.1fr;gap:28px;padding-top:48px}
+  .feature-visual{min-height:315px}
+  .cover{height:160px}
+}
+@media(max-width:1000px){
+  .top .nav{height:66px;gap:10px}
+  .top .logo{font-size:19px}
+  .top .navlinks{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;margin:0;padding:12px;background:#1d1b24;border:1px solid #34313c;border-radius:0 0 12px 12px;box-shadow:0 14px 28px #100e1766;z-index:35}
+  .top .navlinks.mobile-open{display:grid;gap:4px}
+  .top .navlinks a,.top .navlinks button{width:100%;padding:11px 12px;text-align:left;border-radius:7px}
+  .top .navlinks a:hover,.top .navlinks button:hover{background:#ffffff0d}
+  .top .navlinks .mobile-account,.top .navlinks .mobile-logout{display:block}
+  .menu-toggle{display:grid;place-items:center;width:38px;height:38px;padding:0;border:1px solid #393641;border-radius:9px;background:#24222b;color:#fff}
+  .menu-toggle svg{width:18px;height:18px}
+  .top .navuser{margin-left:auto}
+  .top .navuser .btn{padding:8px 10px;font-size:12px}
+  .top .navuser .btn:not(.primary){display:none}
+  .top .navuser .btn.primary{white-space:nowrap}
+  .top .navlinks .palette-wrap .pal-label{display:none}
+  .top .navlinks .palette-wrap>.btn{width:100%;text-align:left}
+  .top>#theme{width:38px;height:38px;padding:0}
+  .hero-in{grid-template-columns:1fr;gap:25px;padding-top:38px;padding-bottom:35px}
+  .hero h1{font-size:clamp(39px,9vw,58px);letter-spacing:-.05em}
+  .hero p{font-size:16px}
+  .feature-visual{min-height:265px}
+  .metrics{gap:22px}
+  .section{padding:42px 0}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .cover{height:145px}
+  .cardbody{padding:14px}
+  .card h3{font-size:16px}
+  .excerpt{font-size:12px;min-height:56px}
+  .byline{font-size:10px}
+  .sectionhead{align-items:flex-start;flex-wrap:wrap}
+  .band{padding:26px;margin-bottom:35px}
+}
+@media(max-width:520px){
+  .wrap{padding-left:17px;padding-right:17px}
+  .top .nav{gap:7px}
+  .top .logo{font-size:17px;letter-spacing:-.5px}
+  .hero-in{padding-top:32px}
+  .hero .eyebrow{font-size:10px}
+  .hero h1{font-size:42px;margin:15px 0}
+  .hero p{font-size:15px}
+  .hero .actions{gap:8px}
+  .hero .actions .btn{padding:10px 12px;font-size:13px}
+  .feature-visual{min-height:230px;padding:20px}
+  .feature-visual h2{font-size:26px}
+  .metrics{gap:15px;padding:15px 0}
+  .metric{gap:7px}
+  .metric b{font-size:21px}
+  .metric small{font-size:9px}
+  .section{padding:35px 0}
+  .sectionhead{gap:10px}
+  .section h2{font-size:26px}
+  .sectionhead .btn{padding:8px 10px;font-size:11px}
+  .searchrow{align-items:stretch}
+  .search{width:100%;min-width:0;flex-basis:100%}
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding:2px 0 7px}
+  .chip{flex:none}
+  .grid{grid-template-columns:1fr}
+  .cover{height:190px}
+  .cardbody{padding:16px}
+  .card h3{font-size:19px}
+  .excerpt{font-size:13px;min-height:0}
+  .byline{font-size:11px}
+  .writer{padding:13px}
+  .band{padding:23px}
+  .band h2{font-size:25px}
+  .foot{font-size:11px}
+}
 </style>
  </head>
  <body>
@@ -824,24 +968,26 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
      </span>
      The Journal
     </a>
-    <div class="navlinks">
-     <a href="#stories">
-      Explore
-     </a>
-     <a href="#writers">
-      Writers
-     </a>
-     <button onclick="showSaved()">
-      Bookmarks
-     </button>
+    <div class="navlinks" id="main-nav">
+     <a href="#home">Home</a>
+     <a href="#stories">Articles</a>
+     <a href="#categories">Categories</a>
+     <a href="#writers">Writers</a>
+     <a href="#about">About</a>
+     <button onclick="showSaved()">Bookmarks</button>
+     <button class="mobile-account" id="mobile-account" type="button">Sign in</button>
+     <button class="mobile-logout hidden" id="mobile-logout" type="button" onclick="logout()">Sign out</button>
+     <div class="palette-wrap"><button aria-expanded="false" aria-haspopup="true" aria-label="Change color combination" class="btn icon" id="palette-btn" type="button">◐<span class="pal-label"> Colors</span></button><div class="palette-menu hidden" id="palette-menu" role="menu"></div></div>
     </div>
     <div class="grow">
     </div>
     <div class="navuser" id="auth-area">
     </div>
-    <div class="palette-wrap"><button aria-expanded="false" aria-haspopup="true" aria-label="Change color combination" class="btn icon" id="palette-btn" type="button">◐<span class="pal-label"> Colors</span></button><div class="palette-menu hidden" id="palette-menu" role="menu"></div></div>
     <button aria-label="Toggle theme" class="btn icon" id="theme" onclick="toggleTheme()">
      ☼
+    </button>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu()">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
    </div>
   </nav>
@@ -849,13 +995,13 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
    <div class="wrap hero-in">
     <div>
      <span class="eyebrow">
-      Independent writing, carefully curated
+      Insights · Tutorials · Tech · Career
      </span>
-     <h1>Where good ideas<br/>find their readers.</h1>
-     <p>The Journal is a publishing platform for independent writers and curious readers. Share your perspective, build an audience, and discover stories you will not find anywhere else.</p>
+     <h1>Read. Learn.<br/><span class="grad">Share.</span></h1>
+     <p>A home for developers, learners, and curious minds to explore ideas, practical tutorials, and real-world experiences.</p>
      <div class="actions">
       <button class="btn primary" onclick="document.querySelector('#stories').scrollIntoView({behavior:'smooth'})">
-       Browse stories
+       Explore articles
       </button>
       <button class="btn" onclick="openEditor()">
        Start writing
@@ -863,15 +1009,10 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
      </div>
     </div>
     <div class="feature-visual">
-     <span class="pill">
-      From the editor
-     </span>
-     <h2>
-      Good writing informs. Great writing stays with you.
-     </h2>
-     <p>
-      Read widely, write honestly, and find readers who care about the same ideas.
-     </p>
+     <img class="feature-photo" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Developer working at a laptop" fetchpriority="high" onerror="this.hidden=true"/>
+     <span class="pill">The Journal · Editor's pick</span>
+     <h2>Ideas that help you build what comes next.</h2>
+     <p>Thoughtful reads, useful tools, and perspectives from the people doing the work.</p>
     </div>
    </div>
   </header>
@@ -881,7 +1022,7 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
      0
     </b>
     <small>
-     Stories<br/>published
+     Articles<br/>published
     </small>
    </div>
    <div class="metric">
@@ -904,20 +1045,18 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
     <div class="sectionhead">
      <div>
       <span class="eyebrow">
-       Latest stories
+       Discover · Read · Build
       </span>
       <h2>
-       Stories for curious minds
+       Latest articles
       </h2>
       <p class="sub">
-       Fresh perspectives from independent writers, added as they publish.
+       Fresh perspectives, practical guides, and ideas from our community.
       </p>
      </div>
-     <button class="btn" id="mine-button" onclick="showMine()">
-      My studio
-     </button>
+     <button class="btn" id="mine-button" onclick="showMine()">My studio</button>
     </div>
-    <div class="searchrow">
+    <div class="searchrow" id="categories">
      <input aria-label="Search articles" class="search" id="search" placeholder="Search stories, topics or writers" type="search"/>
      <div class="chips" id="chips">
      </div>
@@ -935,10 +1074,10 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
        Our writers
       </span>
       <h2>
-       Meet the writers
+       Meet the community
       </h2>
       <p class="sub">
-       Follow the people behind the stories you enjoy.
+       Get to know the voices behind the latest articles.
       </p>
      </div>
     </div>
@@ -964,7 +1103,7 @@ html[data-palette=grey][data-theme=dark]{--bg:#2b2c2c;--surface:#363737;--surfac
     </div>
    </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" id="about">
    <div class="wrap foot">
     <span>
      <b>
@@ -1190,7 +1329,9 @@ async function api(url, opts = {}) {
 }
 function toggleTheme(){const light=document.documentElement.dataset.theme==='light';document.documentElement.dataset.theme=light?'dark':'light';localStorage.setItem('journal-theme',light?'dark':'light')}
 document.documentElement.dataset.theme=localStorage.getItem('journal-theme')||'light';
-function authUI(){ $('auth-area').innerHTML=me?`<button class="btn" onclick="showMine()">✎ My studio</button><button class="btn primary" onclick="openEditor()">Write</button><button class="btn icon" onclick="logout()" title="Sign out">↪</button>`:`<button class="btn" onclick="openAuth('login')">Sign in</button><button class="btn primary" onclick="openAuth('signup')">Join free</button>`}
+function toggleMenu(force){const nav=$('main-nav'),button=$('menu-toggle'),open=typeof force==='boolean'?force:!nav.classList.contains('mobile-open');nav.classList.toggle('mobile-open',open);button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close navigation':'Open navigation')}
+$('main-nav').querySelectorAll('a,button').forEach(item=>item.addEventListener('click',()=>{if(item.id!=='palette-btn')toggleMenu(false)}));
+function authUI(){ $('auth-area').innerHTML=me?`<button class="btn" onclick="showMine()">✎ My studio</button><button class="btn primary" onclick="openEditor()">Write</button><button class="btn icon" onclick="logout()" title="Sign out">↪</button>`:`<button class="btn" onclick="openAuth('login')">Sign in</button><button class="btn primary" onclick="openAuth('signup')">Join free</button>`;$('mobile-account').textContent=me?'My studio':'Sign in';$('mobile-account').onclick=()=>me?showMine():openAuth('login');$('mobile-logout').classList.toggle('hidden',!me)}
 function openAuth(mode='login'){authMode=mode;$('auth-heading').textContent=mode==='login'?'Welcome back':'Join The Journal';$('auth-sub').textContent=mode==='login'?'Sign in to write, comment and save stories.':'Create a free account to start publishing.';$('username-field').classList.toggle('hidden',mode==='login');$('auth-username').required=mode==='signup';$('auth-submit').textContent=mode==='login'?'Sign in':'Create account';$('auth-switch').textContent=mode==='login'?'New here? Create an account':'Already a member? Sign in';$('auth-error').textContent='';$('auth-password').value='';$('auth-dialog').showModal()}
 $('auth-switch').onclick=e=>{e.preventDefault();closeDialog('auth-dialog');openAuth(authMode==='login'?'signup':'login')};
 $('auth-form').onsubmit=async e=>{e.preventDefault();try{const body={email:$('auth-email').value,password:$('auth-password').value};if(authMode==='signup')body.username=$('auth-username').value;const data=await api('/api/'+(authMode==='login'?'login':'signup'),{method:'POST',body:JSON.stringify(body)});me=data.user;closeDialog('auth-dialog');authUI();toast('Welcome, '+me.username+'!');await refresh()}catch(err){$('auth-error').textContent=err.message}};
@@ -1244,8 +1385,8 @@ async function openWriter(id){try{const w=await api('/api/writers/'+id);$('saved
 async function followWriter(id){if(!me){toast('Sign in to follow writers');return}try{const r=await api(`/api/writers/${id}/follow`,{method:'POST'});toast(r.following?'Writer followed':'Unfollowed');openWriter(id)}catch(e){toast(e.message)}}
 (async()=>{try{me=(await api('/api/me')).user}catch{}authUI();await refresh()})();
   
-const PALETTES=[{id:'sage',name:'Soft sage',a:'#55745f',b:'#f5f7f3'},{id:'walnut',name:'Walnut brown',a:'#7a5c3e',b:'#faf7f2'},{id:'burgundy',name:'Burgundy',a:'#7d2e3d',b:'#fbf8f6'},{id:'rust',name:'Rust clay',a:'#a14a2c',b:'#faf7f4'},{id:'grey',name:'Minimal grey',a:'#4b5052',b:'#f6f6f5'}];
-function paletteId(){return document.documentElement.dataset.palette||'sage'}
+const PALETTES=[{id:'violet',name:'Modern violet',a:'#7745cf',b:'#f7f7fb'},{id:'sage',name:'Soft sage',a:'#55745f',b:'#f5f7f3'},{id:'walnut',name:'Walnut brown',a:'#7a5c3e',b:'#faf7f2'},{id:'burgundy',name:'Burgundy',a:'#7d2e3d',b:'#fbf8f6'},{id:'rust',name:'Rust clay',a:'#a14a2c',b:'#faf7f4'},{id:'grey',name:'Minimal grey',a:'#4b5052',b:'#f6f6f5'}];
+function paletteId(){return document.documentElement.dataset.palette||'violet'}
 function markPalette(){document.querySelectorAll('.palette-item').forEach(b=>b.setAttribute('aria-checked',b.dataset.id===paletteId()))}
 function setPalette(id){document.documentElement.dataset.palette=id;try{localStorage.setItem('journal-palette',id)}catch(e){}markPalette()}
 function closePalette(){$('palette-menu').classList.add('hidden');$('palette-btn').setAttribute('aria-expanded','false')}
